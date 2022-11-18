@@ -19,7 +19,11 @@ namespace CombatSimulator
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            _graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
+            _graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
 
+            _graphics.ApplyChanges();
+            
             base.Initialize();
         }
 
